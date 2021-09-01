@@ -18,7 +18,7 @@ Widget resumeNextBackBtn() {
         ElevatedButton(
           child: Text('Confirm'),
           onPressed: () {
-            Get.offNamed(AppRoutes.STATUSPAGE);
+            Get.offNamed(AppRoutes.PROFILEPAGE);
             Get.defaultDialog(
               title: "Obrigado",
               middleText:

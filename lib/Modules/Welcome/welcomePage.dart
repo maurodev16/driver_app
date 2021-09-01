@@ -44,8 +44,7 @@ class WelcomePage extends StatelessWidget {
                   child: Text(
                     "Welcome",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 35.0,
+                      fontSize: 20.0,
                       color: Colors.grey[200],
                     ),
                   ),
@@ -54,18 +53,28 @@ class WelcomePage extends StatelessWidget {
                 SizedBox(height: 30.0),
                 DelayedAnimation(
                   child: Text(
-                    "Your New Personal",
-                    style: TextStyle(fontSize: 20.0, color: Colors.white70),
+                    "to",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.grey[200],
+                    ),
                   ),
                   delay: Get.find<WelcomeController>().delaydAmount + 900,
                 ),
+                SizedBox(height: 30.0),
+
                 DelayedAnimation(
                   child: Text(
-                    "Lets grow now!",
-                    style: TextStyle(fontSize: 20.0, color: Colors.white54),
+                    "TRADI",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35.0,
+                      color: Colors.grey[200],
+                    ),
                   ),
-                  delay: Get.find<WelcomeController>().delaydAmount + 1000,
+                  delay: Get.find<WelcomeController>().delaydAmount + 900,
                 ),
+
                 SizedBox(
                   height: 50.0,
                 ),
@@ -101,6 +110,11 @@ class WelcomePage extends StatelessWidget {
                   ),
                   delay: Get.find<WelcomeController>().delaydAmount + 1200,
                 ),
+                TextButton(
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.PROFILEPAGE);
+                    },
+                    child: Text("Profile")),
                 SizedBox(
                   height: 50.0,
                 ),

@@ -8,5 +8,5 @@ class AppRoutes {
   static const SECURINFOPAGE = '/securInfoPage';
   static const AVATARPAGE = '/avatarPage';
   static const RESUMEPAGE = '/resumePage';
-  static const STATUSPAGE = '/statusPage';
+  static const PROFILEPAGE = '/profilePage';
 }

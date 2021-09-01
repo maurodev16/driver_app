@@ -2,6 +2,8 @@ import 'package:driver_app/Modules/Home/homeBinding.dart';
 import 'package:driver_app/Modules/Home/homePage.dart';
 import 'package:driver_app/Modules/Login/loginBinding.dart';
 import 'package:driver_app/Modules/Login/loginPage.dart';
+import 'package:driver_app/Modules/Profile/profileBinding.dart';
+import 'package:driver_app/Modules/Profile/profilePage.dart';
 import 'package:driver_app/Modules/Register/Address/addressBinding.dart';
 import 'package:driver_app/Modules/Register/Address/addressPage.dart';
 import 'package:driver_app/Modules/Register/Avatar/avatarBinding.dart';
@@ -16,8 +18,6 @@ import 'package:driver_app/Modules/Register/UploadFile/uploadBinding.dart';
 import 'package:driver_app/Modules/Register/UploadFile/uploadFile.dart';
 import 'package:driver_app/Modules/Welcome/WelcomeBinding.dart';
 import 'package:driver_app/Modules/Welcome/WelcomePage.dart';
-import 'package:driver_app/Modules/StatusPage/statusBinding.dart';
-import 'package:driver_app/Modules/StatusPage/statusPage.dart';
 import 'package:get/route_manager.dart';
 
 import 'appRouters.dart';
@@ -79,9 +79,9 @@ class AppPages {
       transition: Transition.cupertinoDialog,
     ),
     GetPage(
-      name: AppRoutes.STATUSPAGE,
-      page: () => StatusPage(),
-      binding: StatusBinding(),
+      name: AppRoutes.PROFILEPAGE,
+      page: () => ProfilePage(),
+      binding: ProfileBinding(),
       transition: Transition.cupertinoDialog,
     ),
   ];
