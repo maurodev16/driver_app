@@ -1,9 +1,8 @@
+import 'package:driver_app/Modules/Container/containerBinding.dart';
+import 'package:driver_app/Modules/Container/containerPage.dart';
 import 'package:driver_app/Routers/appPages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'Modules/Welcome/WelcomeBinding.dart';
-import 'Modules/Welcome/WelcomePage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,12 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Driver App',
+      title: 'Tra-di Für Fahrer',
       theme: ThemeData(
         primaryColor: Colors.blue.shade300,
       ),
-      home: WelcomePage(),
-      initialBinding: WelcomeBinding(),
+      home: ContainerPage(),
+      initialBinding: ContainerBinding(),
       getPages: AppPages.appPages,
     );
   }

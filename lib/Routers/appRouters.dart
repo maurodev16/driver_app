@@ -1,5 +1,6 @@
 class AppRoutes {
-  static const WELCOMEPAGE = '/';
+  static const CONTAINERPAGE = '/';
+  static const WELCOMEPAGE = '/welcomePage';
   static const HOMEPAGE = '/homePage';
   static const LOGINPAGE = '/loginPage';
   static const BASICINFOPAGE = '/bacisInfoPage';

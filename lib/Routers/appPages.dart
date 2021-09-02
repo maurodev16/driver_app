@@ -1,3 +1,5 @@
+import 'package:driver_app/Modules/Container/containerBinding.dart';
+import 'package:driver_app/Modules/Container/containerPage.dart';
 import 'package:driver_app/Modules/Home/homeBinding.dart';
 import 'package:driver_app/Modules/Home/homePage.dart';
 import 'package:driver_app/Modules/Login/loginBinding.dart';
@@ -24,6 +26,12 @@ import 'appRouters.dart';
 
 class AppPages {
   static final List<GetPage> appPages = [
+    GetPage(
+      name: AppRoutes.CONTAINERPAGE,
+      page: () => ContainerPage(),
+      binding: ContainerBinding(),
+      transition: Transition.cupertinoDialog,
+    ),
     GetPage(
       name: AppRoutes.WELCOMEPAGE,
       page: () => WelcomePage(),
