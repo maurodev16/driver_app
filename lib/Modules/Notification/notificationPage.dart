@@ -8,9 +8,20 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(Text("Benachrichtigung"), Icon(null)),
+      backgroundColor: Colors.red,
+      appBar: buildAppBar(
+        Text(
+          "Benachrichtigung",
+          style: TextStyle(color: Colors.white),
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(CupertinoIcons.bell),
+          color: Colors.white,
+        ),
+      ),
       body: ListView.builder(
-        itemCount: 1,
+        itemCount: 100,
         itemBuilder: (buildContext, index) {
           return buildCardNotif();
         },

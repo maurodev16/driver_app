@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 Widget buildCardNotif() {
   return Card(
     color: Colors.white,
-    elevation: 2,
+    elevation: 5,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
       side: BorderSide(
@@ -17,7 +17,7 @@ Widget buildCardNotif() {
       children: [
         Container(
           width: Get.width,
-          height: Get.height / 4,
+          height: Get.height / 3.9,
           decoration: ShapeDecoration(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
@@ -37,7 +37,7 @@ Widget buildCardNotif() {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Kundin(e): Luana Rodrigues da Silva",
+                      "Cliente: Fulano de tal",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -65,7 +65,7 @@ Widget buildCardNotif() {
                 ),
               ),
               Text(
-                "Essen",
+                "Sao Paulo",
                 style: TextStyle(
                   color: Colors.grey,
                 ),
@@ -75,7 +75,7 @@ Widget buildCardNotif() {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    " Price pro Stunde ohne Hilfe:",
+                    " Preco por hora:",
                     style: TextStyle(fontSize: 15, color: Colors.blue[500]),
                   ),
                   Icon(CupertinoIcons.money_euro, color: Colors.white),
@@ -96,9 +96,28 @@ Widget buildCardNotif() {
                       style: TextStyle(fontSize: 18, color: Colors.blue[500]),
                     ),
                     Text(
-                      " Erwarte..",
+                      " Aguardando..",
                       style: TextStyle(fontSize: 15, color: Colors.yellow),
                     ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0, top: 14),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(CupertinoIcons.calendar,
+                        color: Colors.white, size: 13),
+                    Text(
+                      " 03 Sept 2021, ",
+                      style: TextStyle(fontSize: 13, color: Colors.blueGrey),
+                    ),
+                    Icon(CupertinoIcons.time, color: Colors.white, size: 13),
+                    Text(
+                      "14:36",
+                      style: TextStyle(fontSize: 13, color: Colors.blueGrey),
+                    )
                   ],
                 ),
               )
@@ -109,23 +128,23 @@ Widget buildCardNotif() {
         Card(
           color: Colors.red,
           child: Text(
-            "UMZUG",
+            "O cliente esta de MUDANCA",
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),
         ),
         SizedBox(height: 10),
         Text(
-          "Hilfe: JA",
+          "O cliente precisa de Ajuda ?: SIM",
           style: TextStyle(fontSize: 15, color: Colors.black),
         ),
         Text(
-          "Etage: 5",
+          "Andares: 5°",
           style: TextStyle(fontSize: 15, color: Colors.black),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
-            "Zu ladende: Tisch, Bücherregal, Kühlschrank, Kleiderschrank, Herd, Schränke",
+            "Carregar: Mesa, Fogao, Geladeira ",
             style: TextStyle(fontSize: 15, color: Colors.black),
           ),
         ),
@@ -134,11 +153,11 @@ Widget buildCardNotif() {
           child: Row(children: [
             Icon(Icons.gps_fixed),
             Text(
-              " Abholen",
+              " Endereco de busca",
               style: TextStyle(fontSize: 13, color: Colors.blueGrey),
             ),
             Text(
-              "   Essen Sybel 45145",
+              "  Campinas, Rua tal, numero 3, Cep 12356",
               style: TextStyle(fontSize: 15, color: Colors.grey[800]),
             )
           ]),
@@ -157,13 +176,8 @@ Widget buildCardNotif() {
                 padding: const EdgeInsets.only(left: 12.0),
                 child: Row(
                   children: [
-                    Icon(CupertinoIcons.time),
                     Text(
-                      " 30 min",
-                      style: TextStyle(fontSize: 13, color: Colors.blueGrey),
-                    ),
-                    Text(
-                      "   Auf Karte öffnen?",
+                      "   Abrir no Mapa?",
                       style: TextStyle(fontSize: 15, color: Colors.grey[800]),
                     ),
                     IconButton(
@@ -183,13 +197,28 @@ Widget buildCardNotif() {
             children: [
               Icon(CupertinoIcons.location_solid),
               Text(
-                " Ziel",
+                " Destino",
                 style: TextStyle(fontSize: 13, color: Colors.blueGrey),
               ),
               Text(
-                "   Essen Pollerbergstr 45145",
+                "   Sao Paulo, Rua tal, numero 3, Cep 12356",
                 style: TextStyle(fontSize: 15, color: Colors.grey[800]),
               )
+            ],
+          ),
+        ),
+        SizedBox(height: 5),
+        Card(
+          child: Column(
+            children: [
+              Text(
+                "Agendamento: 16 sept 21 um 13:00",
+                style: TextStyle(fontSize: 22, color: Colors.red),
+              ),
+              Text(
+                "Agendamento: Hoje",
+                style: TextStyle(fontSize: 22, color: Colors.red),
+              ),
             ],
           ),
         ),
@@ -200,7 +229,7 @@ Widget buildCardNotif() {
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Annehmen"),
+                child: Text("Aceitar"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.red),
                   padding: MaterialStateProperty.all(EdgeInsets.all(10)),
@@ -211,7 +240,7 @@ Widget buildCardNotif() {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text("Ablehnen"),
+                child: Text("Recusar"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.grey[800]),
                 ),
