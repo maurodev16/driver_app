@@ -7,6 +7,7 @@ class LoginController extends GetxController {
     super.onInit();
   }
 
+
   final loginformKey = GlobalKey();
   var _obscureText = true.obs;
   var _email = ''.obs;
@@ -69,4 +70,7 @@ class LoginController extends GetxController {
 
   ///Habilita BUTTON
   bool get formValid => (emailValid)! && (passwordValid)!;
+
+  /**********************************/
+
 }

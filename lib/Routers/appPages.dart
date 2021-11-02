@@ -18,6 +18,8 @@ import 'package:driver_app/Modules/Register/SecurityInfo/securInfoBinding.dart';
 import 'package:driver_app/Modules/Register/SecurityInfo/securInfoPage.dart';
 import 'package:driver_app/Modules/Register/UploadFile/uploadBinding.dart';
 import 'package:driver_app/Modules/Register/UploadFile/uploadFile.dart';
+import 'package:driver_app/Modules/Splash/SplashBinding.dart';
+import 'package:driver_app/Modules/Splash/SplashPage.dart';
 import 'package:driver_app/Modules/Welcome/WelcomeBinding.dart';
 import 'package:driver_app/Modules/Welcome/WelcomePage.dart';
 import 'package:get/route_manager.dart';
@@ -36,6 +38,12 @@ class AppPages {
       name: AppRoutes.WELCOMEPAGE,
       page: () => WelcomePage(),
       binding: WelcomeBinding(),
+      transition: Transition.cupertinoDialog,
+    ),
+    GetPage(
+      name: AppRoutes.SPLASHPAGE,
+      page: () => SplashPage(),
+      binding: SplashBinding(),
       transition: Transition.cupertinoDialog,
     ),
     GetPage(

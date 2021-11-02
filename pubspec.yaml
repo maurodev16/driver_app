@@ -24,16 +24,26 @@ dependencies:
   flutter:
     sdk: flutter
   get:
-  hive:
+  hive: ^2.0.4
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.0.8
   flutter_form_builder: ^6.0.1
   avatar_glow:
   bottom_navy_bar: ^6.0.0
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.1.0
-  
+  http: ^0.13.3
+  animated_text_kit: ^4.2.1
+  connectivity: ^3.0.6
+  toast: ^0.1.5
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  hive_generator: ^1.1.1
+  build_runner: ^2.1.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

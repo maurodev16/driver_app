@@ -1,12 +1,22 @@
-import 'package:driver_app/Modules/Home/homeBinding.dart';
+import 'dart:io';
+
+import 'package:driver_app/Modules/Splash/SplashPage.dart';
 import 'package:driver_app/Routers/appPages.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'Modules/PageNotfound/pageNotfound.dart';
+import 'Modules/Splash/SplashBinding.dart';
 
-import 'Modules/Home/homePage.dart';
+void _enablePlatformOverrideForDesktop() {
+  if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
+    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  }
+}
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  _enablePlatformOverrideForDesktop();
   runApp(MyApp());
 }
 
@@ -15,14 +25,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Tra-di Für Fahrer',
+      title: 'Umzugi - Firma',
       theme: ThemeData(
         primaryColor: Colors.blue.shade300,
       ),
-      home: HomePage(), //ContainerPage(),
-      initialBinding:
-          HomeBinding(), // BasicInfoBinding(), //ContainerBinding(),
+      home: SplashPage(), //ContainerPage(),
+      initialBinding: SplashBinding(),
+      // HomeBinding(), // BasicInfoBinding(), //ContainerBinding(),
       getPages: AppPages.appPages,
+      unknownRoute: GetPage(name: '/pageNotfound', page: () => PageNotfound()),
     );
   }
 }
